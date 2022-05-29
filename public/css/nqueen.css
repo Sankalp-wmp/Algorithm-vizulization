@@ -1,0 +1,269 @@
+div{
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    position: relative;
+    
+  }
+  
+  #chessboard{
+    padding: 0;
+    margin: auto;
+    
+  }
+  img{
+    position: absolute;
+    transition: left 0.1s linear;
+    -webkit-transition: left 0.1s linear;
+  }
+  input{
+    width: auto;
+    padding: 5px;
+    background: #eee;
+    border: 1px #aaa solid;
+    border-radius: 4px;
+    margin-left: 1em;
+  }
+  input:focus{
+    border: 1px #11FF00 solid;
+  }
+  span {
+    color: #fff;
+  }
+  button {
+    border: 1px white solid;
+    border-radius: 50%;
+    color: #111;
+    margin-left: 1em;
+    height: auto;
+  }
+  button:active {
+    border: 1px black solid;
+  }
+  .light{
+    background-color: #17a2b8;
+    color: #fff;
+    width: 60px;
+    height: 30px;
+  }
+  .dark{
+    background-color: #17a2b8;
+    color: #fff;
+    width: 120px;
+    height: 30px;
+  }
+  
+  .full-height {
+    height: 100%;
+    
+    margin-top: -10px;
+  }
+  
+  
+  
+  .home-buttons {
+    color: black;
+    margin-left: 3em;
+  }
+  
+  .home-buttons:hover {
+    margin-top: 0.5%;
+    box-shadow: 5px 5px 0px white;
+  }
+  
+  .bars {
+    border-top: 3px white solid;
+    border-bottom: 3px white solid;
+    width: 180em;
+    height: 25em;
+    margin-top: 1em;
+    padding: 0;
+    padding-left: 0.5em;
+    margin-left: 3em;
+    
+  }
+  
+  .searching-algos {
+    border: 2px white double;
+    margin-top: 1.8em;
+    border-radius: 50px;
+    width: 50em;
+    height: 4em;
+    margin: auto;
+    padding: 0%;
+  }
+  
+  .form-check {
+    margin: 0em 1em;
+  }
+  
+  .search-parameters {
+    border: 2px white solid;
+    float: left;
+    height: 15em;
+    width: 7em;
+    margin: 0;
+    margin-top: 2em;
+    padding: 0.5em;
+  }
+  
+  .colors {
+    border: 2px white solid;
+    float: right;
+    height: 17em;
+    width: 7em;
+    margin: 0;
+    margin-top: 2em;
+    padding: 0.5em;
+  }
+  
+  .color-brush {
+    font-size: 1.5em;
+  }
+  
+  .color-item-label {
+    font-size: 0.8em;
+  }
+  
+  #chosendiv {
+    border: 1px black solid;
+    border-radius: 10px 10px;
+    margin: 0;
+    width: 30em;
+    float: left;
+    margin-top: 1em;
+    margin-left: 2em;
+    height: 2em;
+    background: white;
+  }
+  
+  #searchbtn {
+    float: left;
+    margin-left: 17em;
+    margin-top: 0.3em;
+  }
+  
+  .code {
+    border: 1px solid;
+    width: 500px;
+    height: 200px;
+    overflow: auto;
+    outline: none;
+    resize: none;
+  }
+  
+  .sorting-algos {
+    border: 1px white solid;
+    margin-top: 0.6em;
+    border-radius: 50px;
+    width: auto;
+    height: 2em;
+  }
+  
+  #sortbtn {
+    float: left;
+    margin-left: 0em;
+    margin-top: -5em;
+  }
+  
+  #resetBtn {
+    margin: 0;
+    float: left;
+    margin-top: -10em;
+    margin-left: 0em;
+  }
+  
+  .slider {
+    width: 95%;
+    height: 12px;
+  }
+  
+  #sortSpeedLabel {
+    margin-top: 30%;
+  }
+  
+  .boxes {
+    display: grid;
+    width: 705px;
+    height: 410px;
+    grid-template-columns: repeat(25, 25px);
+    grid-template-rows: repeat(15, 25px);
+    gap: 1px;
+    border-top: 3px white solid;
+    border-bottom: 3px white solid;
+    margin-top: 0.3em;
+    padding: 0;
+    padding-left: 2em;
+    padding-top: 0.4em;
+    margin-left: 18em;
+  }
+  
+  #tag {
+    margin-top: 0.2em;
+  }
+  
+  #findbtn {
+    float: left;
+    margin-left: 18em;
+    margin-top: 0.3em;
+  }
+  
+  #resetbtn {
+    float: left;
+    margin-left: 8em;
+    margin-top: 0.3em;
+  }
+  
+  #patternbtn {
+    float: left;
+    margin-left: 8em;
+    margin-top: 0.3em;
+  }
+  
+  .changeThemeBtn {
+    width: 180px;
+    height: 35px;
+    margin-bottom: 0.3em;
+  }
+  
+  #changeThemeOnepiece {
+    background-size: 180px 35px;
+    background-position: center;
+    background-image: url("/static/images/OnePiece.png");
+  }
+  
+  #changeThemeMinecraft {
+    background-size: 180px 35px;
+    background-position: center;
+    background-image: url("/static/images/MinecraftBtn.png");
+  }
+  
+  #changeThemeThor {
+    background-size: 180px 35px;
+    background-position: center;
+    background-image: url("/static/images/ThorBtn.png");
+  }
+  
+  .info-div {
+    display: flex;
+    float: left;
+    background-size: 25px 25px;
+    width: 30px;
+    height: 30px;
+    margin-left: 3em;
+    background-color: #17a2b8;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+  }
+  
+  .pathfinding-algos {
+    border: 1px white solid;
+    margin-top: 0.2em;
+    border-radius: 50px;
+    width: 70em;
+    height: 3em;
+  }
+  
+  

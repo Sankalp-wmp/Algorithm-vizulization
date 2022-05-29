@@ -1,0 +1,377 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+        />
+        <!--favicon-->
+        
+        <!-- <link rel="stylesheet" href="../assets/css/home.css"> -->
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="static/images/favicon/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="static/images/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="static/images/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="static/images/favicon/site.webmanifest" />
+        <!-- Bootstrap CSS framework -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous"
+        />
+        
+        <!-- Fontawesome icons -->
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+          crossorigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Electrolize&family=Press+Start+2P&family=Staatliches&display=swap"
+          rel="stylesheet"
+        />
+    
+        <!-- <link rel="stylesheet" href="/css/home.css"> -->
+    
+        <style>
+          .full-height {
+      height: 100%;
+    }
+    
+    @media (max-width: 600px) {
+      .hide {
+        display: none;
+      }
+    }
+    
+    a {
+      text-decoration: none;
+    }
+    
+    .home-buttons {
+      color: black;
+      margin-left: 3em;
+    }
+    
+    .home-buttons:hover {
+      margin-top: 0.5%;
+      box-shadow: 5px 5px 0px white;
+    }
+    
+    .bars {
+      border-top: 3px white solid;
+      border-bottom: 3px white solid;
+      width: 50em;
+      height: 25em;
+      margin-top: 1em;
+      padding: 0;
+      padding-left: 0.5em;
+      margin-left: 15em;
+      
+    }
+    
+    .searching-algos {
+      border: 2px white double;
+      margin-top: 0.5em;
+      border-radius: 50px;
+      width: 50em;
+      height: 2em;
+    }
+    
+    .form-check {
+      margin: 0em 1em;
+    }
+    
+    .search-parameters {
+      border: 2px white solid;
+      float: left;
+      height: 20em;
+      width: 10em;
+      margin: 0;
+      margin-top: 2em;
+      padding: 1em;
+    }
+    
+    .colors {
+      border: 2px white solid;
+      float: right;
+      height: 20em;
+      width: 9em;
+      margin: 0;
+      margin-top: 2em;
+      padding: 0.5em;
+    }
+    
+    .color-brush {
+      font-size: 1.5em;
+    }
+    
+    .color-item-label {
+      font-size: 0.8em;
+    }
+    
+    #chosendiv {
+      border: 1px black solid;
+      border-radius: 10px 10px;
+      margin: 0;
+      width: 30em;
+      float: left;
+      margin-top: 1em;
+      margin-left: 2em;
+      height: 2em;
+      background: white;
+    }
+    
+    #searchbtn {
+      float: left;
+      margin-left: 17em;
+      margin-top: 0.3em;
+    }
+    
+    .code {
+      border: 1px solid;
+      width: 500px;
+      height: 200px;
+      overflow: auto;
+      outline: none;
+      resize: none;
+    }
+    
+    .sorting-algos {
+      border: 1px white solid;
+      margin-top: 0.5em;
+      border-radius: 50px;
+      width: auto;
+      height: 2em;
+    }
+    
+    #sortbtn {
+      float: left;
+      margin-left: 11em;
+      margin-top: 0.3em;
+    }
+    
+    #resetBtn {
+      margin: 0;
+      float: left;
+      margin-top: 0.3em;
+      margin-left: 2em;
+    }
+    
+    .slider {
+      width: 95%;
+      height: 12px;
+    }
+    
+    #sortSpeedLabel {
+      margin-top: 30%;
+    }
+    
+    .boxes {
+      display: grid;
+      width: 705px;
+      height: 410px;
+      grid-template-columns: repeat(25, 25px);
+      grid-template-rows: repeat(15, 25px);
+      gap: 1px;
+      border-top: 3px white solid;
+      border-bottom: 3px white solid;
+      margin-top: 0.3em;
+      padding: 0;
+      padding-left: 2em;
+      padding-top: 0.4em;
+      margin-left: 8em;
+    }
+    
+    #tag {
+      margin-top: 0.2em;
+    }
+    
+    #findbtn {
+      float: left;
+      margin-left: 13em;
+      margin-top: 0.3em;
+    }
+    
+    #resetbtn {
+      float: left;
+      margin-left: 8em;
+      margin-top: 0.3em;
+    }
+    
+    #patternbtn {
+      float: left;
+      margin-left: 8em;
+      margin-top: 0.3em;
+    }
+    
+    .changeThemeBtn {
+      width: 80px;
+      height: 35px;
+      margin-bottom: 0.3em;
+      
+    }
+    
+    #changeThemeOnepiece {
+      background-size: 180px 35px;
+      background-position: center;
+      background-image: url("images/OnePiece.png");
+    }
+    
+    #changeThemeMinecraft {
+      background-size: 180px 35px;
+      background-position: center;
+      background-image: url("images/MinecraftBtn.png");
+    }
+    
+    #changeThemeThor {
+      background-size: 180px 35px;
+      background-position: center;
+      background-image: url("images/ThorBtn.png");
+    }
+    #pathSpeedLabel {
+      width: 5em;
+    }
+    .info-div {
+      display: flex;
+      float: left;
+      background-size: 25px 25px;
+      width: 30px;
+      height: 30px;
+      margin-left: 3em;
+      background-color: #17a2b8;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+    }
+    
+    .pathfinding-algos {
+      border: 1px white solid;
+      margin-top: 0.2em;
+      border-radius: 50px;
+      width: 70em;
+      height: 3em;
+    }
+    
+    .form-group{
+      width: 6em;
+      margin: auto;
+    }
+        </style>
+    </head>
+    <body style="background: #0c0032; color: white">
+        
+      <div class="full-height" style="background: #0c0032; color: white">
+        <nav class="navbar navbar-light" style="background: #17a2b8; height: 3.3em; color: white">
+          <a class="navbar-brand" href="/">
+            
+            <span class="hide">Algo-Viz</span>
+          </a>
+        </nav>
+        <div class="container pathfinding-algos text-center">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="PathAlgos" id="pathAlgo1" value="Dijkstra" />
+            <label class="form-check-label" for="inlineRadio1"><u><a data-toggle="modal"
+                  data-target="#DijkstraModal"><b>Dijkstra</b> (Shortest path)</a></u></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="PathAlgos" id="pathAlgo2" value="A*" />
+            <label class="form-check-label" for="inlineRadio2"><u><a data-toggle="modal" data-target="#AStarModal"><b>A*</b>
+                  (Shortest path)</a></u></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="PathAlgos" id="pathAlgo3" value="bfs" />
+            <label class="form-check-label" for="inlineRadio3"><u><a data-toggle="modal"
+                  data-target="#BFSModal"><b>Bredth-first search</b> (Shortest Path)</a></u></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="PathAlgos" id="pathAlgo4" value="dfs" />
+            <label class="form-check-label" for="inlineRadio4"><u><a data-toggle="modal"
+                  data-target="#DFSModal"><b>Depth-first search</b> (shortest not guaranteed)</a></u></label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="PathAlgos" id="pathAlgo5" value="greedy" />
+            <label class="form-check-label" for="inlineRadio5"><u><a data-toggle="modal" data-target="#BestFirstModal">
+                  <b>Greedy Best-First</b> (shortest not guaranteed)</a></u></label>
+          </div>
+        </div>
+        <div class="container search-parameters">
+          <form>
+            <div class="form-group">
+              <label class="text-center w-100" id="pathSpeedLabel">
+                <b>Speed</b><br />
+              </label>
+              <input type="range" min="1" max="500" value="485" class="slider" id="pathSpeed" />
+            </div>
+            <hr style="width: 100%; background: white" />
+            <label class="text-center w-100" id="pathSpeedLabel">
+              <b>Themes</b><br />
+            </label>
+            <button type="button" class="btn btn-info changeThemeBtn" id="changeThemeDefault">
+              Default</button><br />
+            <button type="button" class="btn btn-info changeThemeBtn" id="changeThemeOnepiece"></button><br />
+            <button type="button" class="btn btn-info changeThemeBtn" id="changeThemeThor"></button><br />
+            <button type="button" class="btn btn-info changeThemeBtn" id="changeThemeMinecraft"></button><br />
+          </form>
+        </div>
+        <div class="container colors text-center">
+          <h4><u>Key</u></h4>
+          <br />
+          <div class="info-div" id="sourceDiv"></div>
+          <span class="info-label">Source</span><br />
+          <hr style="background: white" />
+          <div class="info-div" id="pathDiv"></div>
+          <span class="info-label">Path</span><br />
+          <hr style="background: white" />
+          <div class="info-div" id="wallDiv"></div>
+          <span class="info-label">Wall</span><br />
+          <hr style="background: white" />
+          <div class="info-div" id="goalDiv"></div>
+          <span class="info-label">Goal</span><br />
+        </div>
+        <div class="container boxes text-center"></div>
+        <div id="tag" class="text-center w-100"></div>
+        <button class="btn btn-info" id="findbtn">
+          <span class="fas fa-map"></span> Find Path
+        </button>
+        <button class="btn btn-info" id="resetbtn">
+          <span class="fas fa-redo"></span> Reset Walls
+        </button>
+        <div class="btn-group dropup">
+          <button type="button" id="patternbtn" class="btn btn-info dropdown-toggle" data-toggle="dropup"
+            aria-haspopup="true" aria-expanded="false">
+            Wall Patterns
+          </button>
+          <div class="dropdown-menu text-center">
+            <a class="w-100" type="button" onclick="drawWallPreset(wallPreset1)">
+              Pattern 1</a>
+            <div class="dropdown-divider"></div>
+            <a class="w-100" type="button" onclick="drawWallPreset(wallPreset2)">
+              Pattern 2</a>
+          </div>
+        </div>
+      </div>
+      </div>
+      <script src="js/path.js"></script> 
+
+    </body>
+</html>

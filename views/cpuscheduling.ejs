@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scheduling Algorithms Visualizer</title>
+
+    <!-- Bootstrap core CSS -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <!--favicon-->
+    
+    <!-- <link rel="stylesheet" href="../assets/css/home.css"> -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="static/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="static/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="static/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="static/images/favicon/site.webmanifest" />
+    <!-- Bootstrap CSS framework -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    
+    <!-- Fontawesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Electrolize&family=Press+Start+2P&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template -->
+    
+    <!-- Canvas JS -->
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/cpuscheduling.css">
+  </head>
+  <body style="background: #0c0032; color: white">
+    <div class="full-height" style="background: #0c0032; color: white">
+      <nav class="navbar navbar-light" style="background: #17a2b8; height: 3.3em; color: white">
+        <a class="navbar-brand" href="/">
+          
+          <span class="hide">Algo-Vision</span>
+        </a>
+      </nav>
+      <div class="container searching-algos text-center">
+        <div class="form-check form-check-inline">
+          
+          <label class="form-check-label" for="inlineRadio1"><u><a data-toggle="modal"
+                data-target="#SequentialModal" id='fcfs'>First Come First Serve</a></u></label>
+        </div>
+        <div class="form-check form-check-inline">
+          
+          <label class="form-check-label" for="inlineRadio2"><u><a data-toggle="modal"
+                data-target="#BinaryModal" id='srjf'>Shortest Job First</a></u></label>
+        </div>
+        <div class="form-check form-check-inline">
+          
+          <label class="form-check-label" for="inlineRadio3"><u><a data-toggle="modal"
+                data-target="#InterpolationModal" id='srtf'>Shortest Remaining First</a></u></label>
+        </div>
+        <div class="form-check form-check-inline">
+         
+          <label class="form-check-label" for="inlineRadio3"><u><a data-toggle="modal"
+                data-target="#InterpolationModal" id='round-robin'>Round Robin</a></u></label>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-left: 10%;">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">CPU Scheduling Algorithms</h1>
+            <div class="btn-toolbar" id="timer">
+              Current Time - 0 seconds
+            </div>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group me-1">
+                Time Quantum - 2 seconds
+              </div>
+            </div>
+          </div>
+
+          <div class="my-4 w-100" width="900" style='height: 340%;' id="chartContainer">
+          </div>
+          <div class="d-flex justify-content-center mt-0">
+            <button type="button" id="regenerate" class="btn btn-success">Regenerate</button>
+          </div>
+        </main>
+      </div>
+    </div>
+    </div>
+    <script src="js/cpuscheduling.js"></script> 
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+  
+
+</body>
+</html>

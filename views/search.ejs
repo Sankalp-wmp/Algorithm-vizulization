@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <!--favicon-->
+    
+    <link rel="stylesheet" href="css/search.css"> 
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="static/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="static/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="static/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="static/images/favicon/site.webmanifest" />
+    <!-- Bootstrap CSS framework -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    
+    <!-- Fontawesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Electrolize&family=Press+Start+2P&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/search.css">
+
+    
+    
+  </head>
+  <body style="background: #0c0032; color: white">
+    <div class="full-height" style="background: #0c0032; color: white">
+      <nav class="navbar navbar-light" style="background: #17a2b8; height: 3.3em; color: white">
+        <a class="navbar-brand" href="/">
+          
+          <span class="hide">Algo-Viz</span>
+        </a>
+      </nav>
+    <div class="container searching-algos text-center">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="SearchAlgos" id="searchAlgo1" value="Sequential" />
+          <label class="form-check-label" for="inlineRadio1"><u><a data-toggle="modal"
+                data-target="#SequentialModal">Sequential</a></u></label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="SearchAlgos" id="searchAlgo2" value="Binary" />
+          <label class="form-check-label" for="inlineRadio2"><u><a data-toggle="modal"
+                data-target="#BinaryModal">Binary</a></u></label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="SearchAlgos" id="searchAlgo3" value="Interpolation" />
+          <label class="form-check-label" for="inlineRadio3"><u><a data-toggle="modal"
+                data-target="#InterpolationModal">Interpolation</a></u></label>
+        </div>
+    </div>
+
+
+    <div class="container search-parameters">
+        <form>
+          <div class="form-group">
+            <label class="text-center" for="ToSearch" id="ToSearchLabel">
+              <b>Enter a number to search.(Optional)</b><br />
+              <span id="ToSearchRange">(The number should be in the range: [1,39] )</span><br />
+              <span style="font-size: 0.8em">*If a number is not provided, we will select a random number from
+                the range</span>
+            </label>
+            <input type="text" class="form-control text-center" id="ToSearch" placeholder="Enter here" />
+          </div>
+        </form>
+    </div>
+
+    <div class="container colors text-center">
+        <h4>Key</h4>
+        <span class="fas fa-paint-brush color-brush" style="color: #3500d3"></span><span class="color-item"><span
+            class="color-item-label">Upper/lower search bound</span></span><br />
+        <hr style="background: white" />
+        <span class="fas fa-paint-brush color-brush" style="color: #ffdd01"></span><span class="color-item"><span
+            class="color-item-label">Checking</span></span><br />
+        <hr style="background: white" />
+        <span class="fas fa-paint-brush color-brush" style="color: #d80702"></span><span class="color-item"><span
+            class="color-item-label">Wrong one</span></span><br />
+        <hr style="background: white" />
+        <span class="fas fa-paint-brush color-brush" style="color: #5cdb95"></span><span class="color-item"><span
+            class="color-item-label">Found</span></span><br />
+    </div>
+
+    <div class="container bars text-center"></div>
+
+    <div class="text-center" id="search" style="margin-left: 0%;">
+      <button class="btn btn-info btn-lg" id="searchbtn">
+        <span class="fas fa-search"></span> Search
+      </button>
+      <div id="chosendiv">
+        <span id="chosen"></span>
+      </div>
+    </div>
+  </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/search.js"></script> 
+    
+
+  </body>
+</html>

@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Roboto Slab", serif;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  .hide {
+    display: none;
+  }
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  max-width: 960px;
+  margin: auto;
+  margin-top: 4%;
+}
+
+.card--1 .card__img,
+.card--1 .card__img--hover {
+  background-image: url("https://images.unsplash.com/photo-1516382799247-87df95d790b7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bWFnbmlmeWluZyUyMGdsYXNzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+.card--2 .card__img,
+.card--2 .card__img--hover {
+  background-image: url("https://images.unsplash.com/photo-1529488260486-8695a04beaee?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8c29ydGluZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+.card--3 .card__img,
+.card--3 .card__img--hover {
+  background-image: url("https://images.unsplash.com/photo-1603623898218-0cb7f493309b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fGNvbXBhc3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+.card--4 .card__img,
+.card--4 .card__img--hover {
+  background-image: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGNvZGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+.card--5 .card__img,
+.card--5 .card__img--hover {
+  background-image: url("https://images.unsplash.com/photo-1617083855008-9950a885c564?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cXVlZW4lMjBpbiUyMGNoZXNzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+
+.card__like {
+  width: 18px;
+}
+
+.card__clock {
+  width: 15px;
+  vertical-align: middle;
+  fill: #ad7d52;
+}
+.card__time {
+  font-size: 12px;
+  color: #ad7d52;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.card__clock-info {
+  float: right;
+}
+
+.card__img {
+  visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card__info-hover {
+  position: absolute;
+  padding: 3px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+}
+
+.card__img--hover {
+  transition: 0.2s all ease-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0;
+}
+.card {
+  margin-right: 25px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  width: 33.3%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1, 1.1);
+}
+
+.card__info {
+  z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 0px 0px 0px 10px;
+}
+
+.card__category {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #868686;
+}
+
+.card__title {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: "Roboto Slab", serif;
+}
+
+.card__by {
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+.card__author {
+  font-weight: 600;
+  text-decoration: none;
+  color: #ad7d52;
+}
+
+.card:hover .card__img--hover {
+  height: 100%;
+  opacity: 0.3;
+}
+
+.card:hover .card__info {
+  background-color: transparent;
+  position: relative;
+}
+
+.card:hover .card__info-hover {
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-buttons {
+  color: black;
+  margin-left: 3em;
+}
+
+.home-buttons:hover {
+  margin-top: 0.5%;
+  box-shadow: 5px 5px 0px white;
+}
+
+.bars {
+  border-top: 3px white solid;
+  border-bottom: 3px white solid;
+  width: 50em;
+  height: 25em;
+  margin-top: 1em;
+  padding: 0;
+  padding-left: 0.5em;
+  margin-left: 15em;
+  background-color: #ad7d52;
+}
+
+.searching-algos {
+  border: 2px white double;
+  margin-top: 0.5em;
+  border-radius: 50px;
+  width: 50em;
+  height: 2em;
+}
+
+.form-check {
+  margin: 0em 1em;
+}
+
+.search-parameters {
+  border: 2px white solid;
+  float: left;
+  height: 20em;
+  width: 14em;
+  margin: 0;
+  margin-top: 2em;
+  padding: 1em;
+}
+
+.colors {
+  border: 2px white solid;
+  float: right;
+  height: 20em;
+  width: 14em;
+  margin: 0;
+  margin-top: 2em;
+  padding: 0.5em;
+}
+
+.color-brush {
+  font-size: 1.5em;
+}
+
+.color-item-label {
+  font-size: 0.8em;
+}
+
+#chosendiv {
+  border: 1px black solid;
+  border-radius: 10px 10px;
+  margin: 0;
+  width: 30em;
+  float: left;
+  margin-top: 1em;
+  margin-left: 2em;
+  height: 2em;
+  background: white;
+}
+
+#searchbtn {
+  float: left;
+  margin-left: 17em;
+  margin-top: 0.3em;
+}
+
+.code {
+  border: 1px solid;
+  width: 500px;
+  height: 200px;
+  overflow: auto;
+  outline: none;
+  resize: none;
+}
+
+.sorting-algos {
+  border: 1px white solid;
+  margin-top: 0.5em;
+  border-radius: 50px;
+  width: auto;
+  height: 2em;
+}
+
+#sortbtn {
+  float: left;
+  margin-left: 11em;
+  margin-top: 0.3em;
+}
+
+#resetBtn {
+  margin: 0;
+  float: left;
+  margin-top: 0.3em;
+  margin-left: 2em;
+}
+
+.slider {
+  width: 95%;
+  height: 12px;
+}
+
+#sortSpeedLabel {
+  margin-top: 30%;
+}
+
+.boxes {
+  display: grid;
+  width: 705px;
+  height: 410px;
+  grid-template-columns: repeat(25, 25px);
+  grid-template-rows: repeat(15, 25px);
+  gap: 1px;
+  border-top: 3px white solid;
+  border-bottom: 3px white solid;
+  margin-top: 0.3em;
+  padding: 0;
+  padding-left: 2em;
+  padding-top: 0.4em;
+  margin-left: 18em;
+}
+
+#tag {
+  margin-top: 0.2em;
+}
+
+#findbtn {
+  float: left;
+  margin-left: 18em;
+  margin-top: 0.3em;
+}
+
+#resetbtn {
+  float: left;
+  margin-left: 8em;
+  margin-top: 0.3em;
+}
+
+#patternbtn {
+  float: left;
+  margin-left: 8em;
+  margin-top: 0.3em;
+}
+
+.changeThemeBtn {
+  width: 180px;
+  height: 35px;
+  margin-bottom: 0.3em;
+}
+
+#changeThemeOnepiece {
+  background-size: 180px 35px;
+  background-position: center;
+  background-image: url("/static/images/OnePiece.png");
+}
+
+#changeThemeMinecraft {
+  background-size: 180px 35px;
+  background-position: center;
+  background-image: url("/static/images/MinecraftBtn.png");
+}
+
+#changeThemeThor {
+  background-size: 180px 35px;
+  background-position: center;
+  background-image: url("/static/images/ThorBtn.png");
+}
+
+.info-div {
+  display: flex;
+  float: left;
+  background-size: 25px 25px;
+  width: 30px;
+  height: 30px;
+  margin-left: 3em;
+  background-color: #17a2b8;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.pathfinding-algos {
+  border: 1px white solid;
+  margin-top: 0.2em;
+  border-radius: 50px;
+  width: 70em;
+  height: 3em;
+}
